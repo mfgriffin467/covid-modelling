@@ -1,0 +1,182 @@
+country,year,hospital_beds_per_10000,critical_care_beds_per_100000,country_map
+Afghanistan,2015,5,,Afghanistan
+Albania,2013,29,,Albania
+Algeria,2015,19,,Algeria
+Angola,2005,8,,Angola
+Antigua and Barbuda,2014,38,,Antigua and Barbuda
+Argentina,2014,50,,Argentina
+Armenia,2015,42,,Armenia
+Australia,2014,38,,Australia
+Austria,2013,76,,Austria
+Azerbaijan,2013,47,,Azerbaijan
+Bahamas,2013,29,,Bahamas
+Bahrain,2014,20,,Bahrain
+Bangladesh,2015,8,,Bangladesh
+Barbados,2014,58,,Barbados
+Belarus,2013,110,,Belarus
+Belgium,2014,62,,Belgium
+Belize,2014,13,,Belize
+Benin,2010,5,,Benin
+Bhutan,2012,17,,Bhutan
+Bolivia (Plurinational State of),2014,11,,Bolivia
+Bosnia and Herzegovina,2013,35,,Bosnia and Herzegovina
+Botswana,2010,18,,Botswana
+Brazil,2014,22,,Brazil
+Brunei Darussalam,2015,27,,Brunei Darussalam
+Bulgaria,2013,68,,Bulgaria
+Burkina Faso,2010,4,,Burkina Faso
+Burundi,2014,8,,Burundi
+Cabo Verde,2010,21,,Cabo Verde
+Cambodia,2015,8,,Cambodia
+Cameroon,2010,13,,Cameroon
+Canada,2012,27,,Canada
+Central African Republic,2011,10,,Central African Republic
+Chad,2005,4,,Chad
+Chile,2013,22,,Chile
+China,2012,42,,China
+Colombia,2014,15,,Colombia
+Comoros,2010,22,,Comoros
+Congo,2005,16,,Congo
+Cook Islands,2005,63,,Cook Islands
+Costa Rica,2015,12,,Costa Rica
+Côte d'Ivoire,2006,4,,Côte d'Ivoire
+Croatia,2015,56,,Croatia
+Cuba,2014,52,,Cuba
+Cyprus,2013,34,,Cyprus
+Czechia,2015,65,,Czechia
+Democratic People's Republic of Korea,2010,143,,Democratic People's Republic of Korea
+Democratic Republic of the Congo,2006,8,,Democratic Republic of the Congo
+Denmark,2015,25,,Denmark
+Djibouti,2014,14,,Djibouti
+Dominican Republic,2014,16,,Dominican Republic
+Ecuador,2013,15,,Ecuador
+Egypt,2014,16,,Egypt
+El Salvador,2014,13,,El Salvador
+Equatorial Guinea,2010,21,,Equatorial Guinea
+Eritrea,2011,7,,Eritrea
+Estonia,2015,50,,Estonia
+Eswatini,2011,21,,Eswatini
+Ethiopia,2015,3,,Ethiopia
+Fiji,2011,23,,Fiji
+Finland,2015,44,,Finland
+France,2013,65,,France
+Gabon,2008,13,,Gabon
+Gambia,2011,11,,Gambia
+Georgia,2013,26,,Georgia
+Germany,2013,83,29.2,Germany
+Ghana,2011,9,,Ghana
+Greece,2015,43,,Greece
+Grenada,2014,37,,Grenada
+Guatemala,2014,6,,Guatemala
+Guinea,2011,3,,Guinea
+Guinea-Bissau,2009,10,,Guinea-Bissau
+Guyana,2014,16,,Guyana
+Haiti,2013,7,,Haiti
+Honduras,2014,7,,Honduras
+Hungary,2013,70,,Hungary
+Iceland,2014,32,,Iceland
+India,2011,7,,India
+Indonesia,2015,12,,Indonesia
+Iran (Islamic Republic of),2014,15,,Iran
+Iraq,2014,14,,Iraq
+Ireland,2013,28,,Ireland
+Israel,2013,31,,Israel
+Italy,2012,34,12.5,Italy
+Jamaica,2013,17,,Jamaica
+Japan,2012,134,,Japan
+Jordan,2015,14,,Jordan
+Kazakhstan,2013,67,21.3,Kazakhstan
+Kenya,2010,14,,Kenya
+Kiribati,2015,19,,Kiribati
+Kuwait,2014,20,,Kuwait
+Kyrgyzstan,2013,45,,Kyrgyzstan
+Lao People's Democratic Republic,2012,15,,Lao People's Democratic Republic
+Latvia,2013,58,,Latvia
+Lebanon,2014,29,,Lebanon
+Lesotho,2006,13,,Lesotho
+Liberia,2010,8,,Liberia
+Libya,2014,37,,Libya
+Lithuania,2013,73,,Lithuania
+Luxembourg,2015,48,,Luxembourg
+Madagascar,2010,2,,Madagascar
+Malawi,2011,13,,Malawi
+Malaysia,2015,19,,Malaysia
+Maldives,2009,43,,Maldives
+Mali,2010,1,,Mali
+Malta,2014,47,,Malta
+Mauritania,2006,4,,Mauritania
+Mauritius,2011,34,,Mauritius
+Mexico,2015,15,,Mexico
+Mongolia,2012,70,,Mongolia
+Montenegro,2012,40,,Montenegro
+Morocco,2014,11,,Morocco
+Mozambique,2011,7,,Mozambique
+Myanmar,2012,9,,Myanmar
+Namibia,2009,27,,Namibia
+Nauru,2010,50,,Nauru
+Nepal,2012,3,,Nepal
+Netherlands,2009,47,,Netherlands
+New Zealand,2013,28,,New Zealand
+Nicaragua,2014,9,,Nicaragua
+Niger,2015,3,,Niger
+Nigeria,2004,5,,Nigeria
+Niue,2006,52,,Niue
+Norway,2013,39,,Norway
+Oman,2014,16,,Oman
+Pakistan,2014,6,,Pakistan
+Panama,2013,23,,Panama
+Paraguay,2011,13,,Paraguay
+Peru,2014,16,,Peru
+Philippines,2010,5,,Philippines
+Poland,2013,65,,Poland
+Portugal,2013,34,,Portugal
+Qatar,2014,12,,Qatar
+Republic of Korea,2015,115,,Republic of Korea
+Republic of Moldova,2013,58,,Republic of Moldova
+Romania,2013,63,21.4,Romania
+Russian Federation,2013,82,,Russian Federation
+Rwanda,2006,16,,Rwanda
+Saint Lucia,2013,13,,Saint Lucia
+Saint Vincent and the Grenadines,2014,26,,Saint Vincent and the Grenadines
+Sao Tome and Principe,2011,29,,Sao Tome and Principe
+Saudi Arabia,2014,27,,Saudi Arabia
+Senegal,2008,3,,Senegal
+Serbia,2012,57,,Serbia
+Seychelles,2011,36,,Seychelles
+Sierra Leone,2006,4,,Sierra Leone
+Singapore,2015,24,,Singapore
+Slovakia,2015,58,,Slovakia
+Slovenia,2013,46,,Slovenia
+Solomon Islands,2012,14,,Solomon Islands
+Somalia,2014,9,,Somalia
+South Africa,2005,28,,South Africa
+Spain,2013,30,,Spain
+Sri Lanka,2010,35,,Sri Lanka
+Sudan,2013,8,,Sudan
+Suriname,2010,31,,Suriname
+Sweden,2013,26,,Sweden
+Switzerland,2013,47,,Switzerland
+Syrian Arab Republic,2014,15,,Syrian Arab Republic
+Tajikistan,2013,48,,Tajikistan
+Thailand,2005,21,,Thailand
+Republic of North Macedonia,2013,44,,Republic of North Macedonia
+Timor-Leste,2009,59,,Timor-Leste
+Togo,2011,7,,Togo
+Trinidad and Tobago,2014,30,,Trinidad and Tobago
+Tunisia,2015,23,,Tunisia
+Turkey,2013,27,,Turkey
+Turkmenistan,2013,74,,Turkmenistan
+Tuvalu,2001,56,,Tuvalu
+Uganda,2010,5,,Uganda
+Ukraine,2013,88,,Ukraine
+United Arab Emirates,2013,12,,United Arab Emirates
+United Kingdom of Great Britain and Northern Ireland,2013,28,,United Kingdom
+United Republic of Tanzania,2010,7,,United Republic of Tanzania
+United States of America,2013,29,34,US
+Uruguay,2014,28,,Uruguay
+Uzbekistan,2013,40,,Uzbekistan
+Venezuela (Bolivarian Republic of),2014,8,,Venezuela
+Viet Nam,2014,26,,Viet Nam
+Yemen,2014,7,,Yemen
+Zambia,2010,20,,Zambia
+Zimbabwe,2011,17,,Zimbabwe
