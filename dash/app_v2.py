@@ -12,11 +12,13 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Read data and create 
-df_final = pd.read_csv("df_final.csv", parse_dates=['date'])
+df_final = pd.read_csv("df_final_v2.csv", parse_dates=['date'])
 #country_list = pd.read_csv("country_list.csv")
 #ctry_list = country_list['country'].unique()
 
-df_filt1 = df_final[df_final.days < 20][['date','country','max_pop','beta','actual_cases','projected_infections']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
+#df_filt1 = df_final[df_final.days < 20][['date','country','max_pop','beta','actual_cases','projected_infections']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
+df_filt1 = df_final[df_final.days <= 25][['date','country','max_pop','beta','actual_cases','projected_infections', 'log_reg_preds']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
+
 df_filt2 = df_final[['date','country','max_pop','beta','projected_susceptible','projected_infections', 'projected_recovered', 'projected_hospitalisation', 'projected_icu', 'projected_beds','projected_fatalities']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 df_filt3 = df_final[['date','country','max_pop','beta', 'projected_hospitalisation', 'projected_icu', 'projected_beds','projected_fatalities']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 

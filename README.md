@@ -4,11 +4,14 @@
 - Monitor trends in actual covid cases and rates by country
 - Provide dynmaic projections to visualise possible trends over 2020
 
+
 ### Modelling approach
-- Simple SIR modelling approach to forecast from reported figures on 01/03/20
+1) Simple SIR modelling approach to forecast from reported figures on 01/03/20 with dynamic input to vary beta and max population affected
+2) Panel regression on confirmed cases with country dummies and policy change dates
+
 
 ### Data sources
-- John Hopkins dashboard feeds, see github below
-- https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed
-- https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths
-- https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered
+- John Hopkins dashboard daily feeds for confirmed cases, deaths and recoveries
+- Hospital data from WHO
+- Country statistics
+- Covid policy change dates, manually compiled
