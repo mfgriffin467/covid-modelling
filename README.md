@@ -15,3 +15,7 @@
 - Hospital data from WHO
 - Country statistics
 - Covid policy change dates, manually compiled
+
+# Dashboard
+- Built in dash
+![](images/dashboard_visual.png)

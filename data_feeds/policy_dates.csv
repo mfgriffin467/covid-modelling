@@ -1,5 +1,5 @@
 country,school_closure_date,lockdown_date,Notes
-China,,23/01/2020,https://www.iscresearch.com/cornavirus-covid-19-update
+China,23/01/2020,23/01/2020,https://www.iscresearch.com/cornavirus-covid-19-update
 Italy,04/03/2020,09/03/2020,
 Spain,14/03/2020,14/03/2020,
 Germany,13/03/2020,,
@@ -8,7 +8,7 @@ France,12/03/2020,,
 US,16/03/2020,,Varied by states
 "South, Korea",26/02/2020,,
 Switzerland,13/03/2020,,
-United Kingdom,20/03/2020,,
+United Kingdom,20/03/2020,24/03/2020,
 Netherlands,16/03/2020,,
 Belgium,12/03/2020,,
 Austria,12/03/2020,,

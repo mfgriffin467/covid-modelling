@@ -12,13 +12,10 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Read data and create 
+#df_final = pd.read_csv("/home/mikegriffin/mysite/df_final_v2.csv", parse_dates=['date'])
 df_final = pd.read_csv("df_final_v2.csv", parse_dates=['date'])
-#country_list = pd.read_csv("country_list.csv")
-#ctry_list = country_list['country'].unique()
 
-#df_filt1 = df_final[df_final.days < 20][['date','country','max_pop','beta','actual_cases','projected_infections']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 df_filt1 = df_final[df_final.days <= 25][['date','country','max_pop','beta','actual_cases','projected_infections', 'log_reg_preds']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
-
 df_filt2 = df_final[['date','country','max_pop','beta','projected_susceptible','projected_infections', 'projected_recovered', 'projected_hospitalisation', 'projected_icu', 'projected_beds','projected_fatalities']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 df_filt3 = df_final[['date','country','max_pop','beta', 'projected_hospitalisation', 'projected_icu', 'projected_beds','projected_fatalities']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 
@@ -33,7 +30,7 @@ app.layout = html.Div([
         dcc.Dropdown(
 		    id='ctry',
             options=[{'label': i, 'value': i} for i in df_final['country'].unique()],
-            value='China'
+            value='Italy'
             ),
         html.Br(),
         html.Label(children='Chart scaling'),
@@ -53,6 +50,9 @@ app.layout = html.Div([
         dcc.Graph(id='graphic2')
         ]),
 
+    html.Div([
+        dcc.Graph(id='graphic2b')
+        ]),
 
     html.Div([
         dcc.Graph(id='graphic3')
@@ -60,10 +60,26 @@ app.layout = html.Div([
 
     html.Div([
         dcc.Markdown(d('''
-        #### NOTES
-        - Data sourced from John Hopkins [dashboard](https://coronavirus.jhu.edu/map.html) - refreshed at least daily
+        ### APPROACH
+
+        - Analysis is for illustrative purposes only - this should not be used for any decision-making
+
+        #### Data Sources
+        - Data for cases, deaths and recovered stats sourced from John Hopkins [dashboard](https://coronavirus.jhu.edu/map.html) - refreshed at least daily
+        - Policy response data sourced from Oxford school of [government](https://www.bsg.ox.ac.uk/research/research-projects/oxford-covid-19-government-response-tracker)
+        - Hospital capacity sourced from WHO
+        - Dataset focusses on 50 countries with most cases
+        
+        #### Modelling
         - Simple modelling based on SRI model, assuming mean period of contagion = 10 days, 5 perc hospitalisation rate, 2.5 perc ICU rate, 1 perc fatality rate 
-        - ADD changeable R0 by time
+        - Also includes log predictions
+        - Model assumes 10x multipler for actual vs tested cases as at 01/03/20
+        - To add: changeable R0 by time
+        
+        #### Dynamic model inputs:
+        - Beta reflects average number of transmission events per person per day during the infectious period
+        - Maximum population reflects total perc of population susceptible to virus 
+
         ''')),
     ]),
 
@@ -169,6 +185,35 @@ def update_deaths(ctry,yaxis_type):
                 yaxis={
                     'title': 'count',
                     'type': 'linear' if yaxis_type == 'Linear' else 'log'
+                    },
+                margin={'l': 100, 'b': 40, 't': 100, 'r': 10},
+                hovermode='closest'
+            )
+        }
+
+
+@app.callback(
+    Output('graphic2b', 'figure'),
+    [Input('ctry', 'value'),
+    Input('yaxis-type', 'value')])
+
+
+def update_deaths(ctry,yaxis_type):
+    return {
+            'data': [dict(
+                x=df_final[df_final.country == ctry]['date'][0:30],
+                y=df_final[df_final.country == ctry]['StringencyIndex'][0:30],
+                mode='lines',
+                opacity=0.7
+                )
+            ],
+            'layout': dict(
+                title="Policy response",
+                xaxis={'title': 'time'},
+                yaxis={
+                    'title': 'Stringency Index',
+                    'type': 'linear' if yaxis_type == 'Linear' else 'log',
+                    'range_y': [0,100]
                     },
                 margin={'l': 100, 'b': 40, 't': 100, 'r': 10},
                 hovermode='closest'
