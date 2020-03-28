@@ -1,8 +1,9 @@
 # COVID dashboard
 
 ### Project aim
-- Monitor trends in actual covid cases and rates by country
-- Provide dynmaic projections to visualise possible trends over 2020
+- Build simple dashboard to monitor trends in actual covid cases and rates by country
+- Provide dynmaic projections to visualise dynamics over 2020 using simple modelling approaches
+- Note that this analysis is for illustrative purposes only - I have no expertise in epidemic modelling
 
 
 ### Modelling approach
@@ -12,10 +13,12 @@
 
 ### Data sources
 - John Hopkins dashboard daily feeds for confirmed cases, deaths and recoveries
-- Hospital data from WHO
-- Country statistics
-- Covid policy change dates, manually compiled
+- Data on hopistal beds sourced from WHO
+- Policy response captured via "Stringency Index" produced by Oxford School of Government
 
-# Dashboard
-- Built in dash
+
+#### Dashboard
+- Built on flask using dash library to cover 50 countries with most confirmed cases
+
+
 ![](images/dashboard_visual.png)
