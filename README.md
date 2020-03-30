@@ -21,4 +21,6 @@
 - Built on flask using dash library to cover 50 countries with most confirmed cases
 
 
+![](images/policy_response.png)
+
 ![](images/dashboard_visual.png)
