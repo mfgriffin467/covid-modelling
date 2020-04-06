@@ -8,14 +8,14 @@ import plotly.express as px
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-
+time_window = 40
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Read data and create 
 #df_final = pd.read_csv("/home/mikegriffin/mysite/df_final_v2.csv", parse_dates=['date'])
 df_final = pd.read_csv("df_final_v2.csv", parse_dates=['date'])
 
-df_filt1 = df_final[df_final.days <= 25][['date','country','max_pop','beta','actual_cases','projected_infections', 'log_reg_preds']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
+df_filt1 = df_final[df_final.days <= time_window][['date','country','max_pop','beta','actual_cases','projected_infections', 'log_reg_preds']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 df_filt2 = df_final[['date','country','max_pop','beta','projected_susceptible','projected_infections', 'projected_recovered', 'projected_hospitalisation', 'projected_icu', 'projected_beds','projected_fatalities']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 df_filt3 = df_final[['date','country','max_pop','beta', 'projected_hospitalisation', 'projected_icu', 'projected_beds','projected_fatalities']].melt(id_vars = ['date', 'country','max_pop','beta'], var_name = 'projection')
 
@@ -135,8 +135,8 @@ app.layout = html.Div([
 def update_cases(ctry,yaxis_type):
 	return {
             'data': [dict(
-            	x=df_final[df_final.country == ctry]['date'][0:30],
-            	y=df_final[df_final.country == ctry]['actual_cases'][0:30],
+            	x=df_final[df_final.country == ctry]['date'][0:time_window],
+            	y=df_final[df_final.country == ctry]['actual_cases'][0:time_window],
             	mode='lines+markers',
             	opacity=0.7,
             	marker={
@@ -168,8 +168,8 @@ def update_cases(ctry,yaxis_type):
 def update_deaths(ctry,yaxis_type):
     return {
             'data': [dict(
-                x=df_final[df_final.country == ctry]['date'][0:30],
-                y=df_final[df_final.country == ctry]['actual_deaths'][0:30],
+                x=df_final[df_final.country == ctry]['date'][0:time_window],
+                y=df_final[df_final.country == ctry]['actual_deaths'][0:time_window],
                 mode='lines+markers',
                 opacity=0.7,
                 marker={
@@ -201,8 +201,8 @@ def update_deaths(ctry,yaxis_type):
 def update_deaths(ctry,yaxis_type):
     return {
             'data': [dict(
-                x=df_final[df_final.country == ctry]['date'][0:30],
-                y=df_final[df_final.country == ctry]['StringencyIndex'][0:30],
+                x=df_final[df_final.country == ctry]['date'][0:time_window],
+                y=df_final[df_final.country == ctry]['StringencyIndex'][0:time_window],
                 mode='lines',
                 opacity=0.7
                 )
@@ -230,8 +230,8 @@ def update_deaths(ctry,yaxis_type):
 def update_graph(ctry,beta_select):
     return {
             'data': [dict(
-                x=df_final[df_final.country == ctry]['date'][0:30],
-                y=df_final[df_final.country == ctry]['fatality_rate'][0:30],
+                x=df_final[df_final.country == ctry]['date'][0:time_window],
+                y=df_final[df_final.country == ctry]['fatality_rate'][0:time_window],
                 mode='lines+markers',
                 opacity=0.7,
                 marker={
